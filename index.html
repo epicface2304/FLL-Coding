@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
-    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
+
   <body>
     <h1>Programming</h1>
     <h4>
-    This section deals with how to program an EV3 robot.
+      This section deals with how to program an EV3 robot.
     </h4>
     <br>
+    
     <div class="grid">
 
       <div class="pink cell card">
         <h2>Setup</h2>
         <h4>How do I set up the Mindstorms Editor?</h4>
-        <a class="button" href="setup.html">Let's go!</a>
+        <a class="button" href="#setup">Let's go!</a>
       </div>
 
       <div class="coral cell card">
         <h2>Intro</h2>
         <h4>How does the code editor work?</h4>
-        <a class="button" href="intro.html">Let's go!</a>
+        <a class="button" href="#intro">Let's go!</a>
       </div>
 
       <div class="blue cell card">
         <h2>Blocks</h2>
         <h4>What are blocks? How can I use them?</h4>
-        <a class="button" href="blocks.html">Let's go!</a>
+        <a class="button" href="#blocks">Let's go!</a>
       </div>
 
       <div class="purple cell card">
         <h2>Sensors</h2>
         <h4>What are sensors? How do I use them?</h4>
-        <a class="button" href="sensors.html">Let's go!</a>
+        <a class="button" href="#sensors">Let's go!</a>
       </div>
 
       <div class="green cell card">
         <h2>Variables</h2>
         <h4>How can I use variables to store data between programs?</h4>
-        <a class="button" href="variables.html">Let's go!</a>
+        <a class="button" href="#variables">Let's go!</a>
       </div>
 
       <div class="maroon cell card">
         <h2>GUI programming</h2>
         <h4>What's a GUI? How can I use them?</h4>
-        <a class="button" href="ui.html">Let's go!</a>
+        <a class="button" href="#ui">Let's go!</a>
       </div>
+    </div>
+    <br>
+    <div id="setup" class="pink card static">
+      <h2>Setting up the IDE</h2>
+      <br>
+      <h4>
+        <b>Wait. An IDE? What's that?</b>
+        <br> An IDE, or integrated development environment, is a way for programmers to easily write programs. To program an EV3, the most widely used IDE is the EV3 MINDSTORMS software. From now on, I'll refer to the LEGO MINDSTORMS software as an IDE.
+        <br><br>
+        <b>How do I get started?</b><br> To get started, head over to the LEGO website and download the <a href="https://education.lego.com/en-us/downloads/mindstorms-ev3/software">EV3 Education software</a>. Install it, and start the program. You should
+        be greeted with this starting screen.
+        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/startscreen.png">
+        <br>Congratulations! You just set up the IDE!
+      </h4>
+    </div>
+
+    <div id="intro" class="coral card static">
+      <h2>Intro to Programming</h2>
+      <br>
+      <h4>
+        <b>How do I make a new program?</b>
+        <br>It's pretty easy, actually. All you need to do is click <code>File</code>, click <code>New Project</code>, and then double-click <code>Program</code>.<br>
+        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/newfile.png"><br> Programs are stored in files called projects, which can have logs, images, sounds, and more programs, all in a single file.
+        <br><br>
+        <b>How does programing work?</b><br> Programing starts with a programming language. The IDE supports only one language, which is block-based. A block-based language means that you don't need to type a single word, which makes it a lot easier to
+        learn. In a block-based language, there is a start, and then there are multiple functions which follow it, one after another. Each function chain is called a thread, which is a set of tasks the EV3 reads and executes. When the EV3 is multitasking,
+        it is called multi-threading or parallel execution because there are multiple "threads" running at the same time. When you "run" the program, the IDE sends the program to the EV3, which the EV3 stores and then executes.
+        <br><br> Thankfully, programming is <i>really</i> easy thanks to the good design of the IDE.
+      </h4>
+    </div>
+
+    <div id="blocks" class="blue card static">
+      <h2>Blocks</h2>
+      <br>
+      <h4>
+        <b>Blocks? What are those?</b>
+        <br>Ah, blocks. They are the basis of the EV3 programming language. Remember the functions we were talking about earlier? Blocks are a representation of the functions within the EV3 programming language.
+        <br><br><b>It's time to meet the blocks!</b>
+      </h4>
+      <div class="grid">
+        <div class="cell static action card">
+          <h2>Action</h2>
+          <h4>
+            World: meet program! Action blocks are how your program interacts with the physical world, either by moving motors, displaying an image, or playing a sound.
+          </h4>
+        </div>
+        <div class="cell static flow card">
+          <h2>Flow</h2>
+          <h4>
+            These blocks are the traffic signals of the programming world. They tell the program to stop, start, or repeat an action.
+          </h4>
+        </div>
+        <div class="cell static sensor card">
+          <h2>Sensor</h2>
+          <h4>
+            Program: meet world! These blocks tell the program what's going on in the world, whether it be the color of the line below it, or the distance of its arm is to the wall.
+          </h4>
+        </div>
+        <div class="cell static data card">
+          <h2>Data Operator</h2>
+          <h4>
+            These blocks take data and manipulate it. Use these blocks to multiply, divide, (calculate the sine of?) your data! In addition, you can use these blocks to store your data in variables.
+          </h4>
+        </div>
+        <div class="cell static advanced card">
+          <h2>Advanced</h2>
+          <h4>
+            These blocks do weird stuff. They can access files for datalogging, stop the program, send bluetooth messages, and read raw sensor data. Don't mess with these if you don't know what you're doing!
+          </h4>
+        </div>
+        <div class="cell static myblock card">
+          <h2>MyBlock</h2>
+          <h4>
+            These blocks can do anything! They can be used in tandem with other blocks to do anything. A thread can be compressed into a MyBlock and easily placed in a program.
+          </h4>
+        </div>
+      </div>
+      
     </div>
   </body>
 
