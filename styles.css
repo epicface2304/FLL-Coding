@@ -1,0 +1,110 @@
+.header {
+  background-color: gainsboro;
+  padding: 10px;
+  margin: -8px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.cell {
+  display: inline-grid;
+}
+
+.card {
+  border: solid white 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-family: "Helvetica";
+  padding: 10px;
+  transform: scale(1);
+  transition-duration: 500ms;
+}
+
+.card:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Helvetica";
+  font-weight: bold;
+}
+
+h4 {
+  margin: 0;
+  font-family: "Helvetica";
+  font-weight: normal;
+}
+
+.card .button {
+  font-family: "Helvetica";
+  background-color: inherit;
+  text-align: center;
+  margin-top: -1.5em;
+  border: inherit;
+  border-radius: 10px;
+  padding: 5px;
+  opacity: 0;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition-duration: 500ms;
+}
+
+.card .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  color: black;
+}
+
+.card:hover .button {
+  opacity: 1;
+  margin-top: 0.5em;
+}
+
+.coral {
+  background-color: coral;
+  color: white;
+  border-style: white 2px;
+}
+
+.blue {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.purple {
+  background-color: slateblue;
+  color: white;
+}
+
+.green {
+  border: solid black 2px;
+  background-color: springgreen;
+  color: black;
+}
+
+.maroon {
+  background-color: maroon;
+  color: white;
+}
+
+.pink {
+  background-color: deeppink;
+  color: white;
+}
