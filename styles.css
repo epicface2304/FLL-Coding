@@ -1,6 +1,4 @@
-
 code {
-
   padding: 0 3px;
   background-color: #444;
   border-radius: 2px;
@@ -42,6 +40,7 @@ a {
   transform: scale(1);
   transition-duration: 500ms;
 }
+
 .static {
   margin: 10px 0;
 }
@@ -142,5 +141,38 @@ h4 {
 
 .pink {
   background-color: deeppink;
+  color: white;
+}
+
+/* Block colors */
+
+.action {
+  background-color: #00af06;
+  color: white;
+}
+
+.flow {
+  background-color: #bf7500;
+  color: white;
+}
+
+.sensor {
+  border: solid black 2px;
+  background-color: #ffff00;
+  color: black;
+}
+
+.data {
+  background-color: #af0707;
+  color: white;
+}
+
+.advanced {
+  background-color: #0015b5;
+  color: white;
+}
+
+.myblock {
+  background-color: #009b7c;
   color: white;
 }
