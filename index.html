@@ -3,7 +3,7 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
   </head>
 
   <body>
@@ -12,7 +12,7 @@
       This section deals with how to program an EV3 robot.
     </h4>
     <br>
-    
+
     <div class="grid">
 
       <div class="pink cell card">
@@ -61,7 +61,7 @@
         <br><br>
         <b>How do I get started?</b><br> To get started, head over to the LEGO website and download the <a href="https://education.lego.com/en-us/downloads/mindstorms-ev3/software">EV3 Education software</a>. Install it, and start the program. You should
         be greeted with this starting screen.
-        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/startscreen.png">
+        <img src="media/startscreen.png">
         <br>Congratulations! You just set up the IDE!
       </h4>
     </div>
@@ -72,7 +72,7 @@
       <h4>
         <b>How do I make a new program?</b>
         <br>It's pretty easy, actually. All you need to do is click <code>File</code>, click <code>New Project</code>, and then double-click <code>Program</code>.<br>
-        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/newfile.png"><br> Programs are stored in files called projects, which can have logs, images, sounds, and more programs, all in a single file.
+        <img src="media/newfile.png"><br> Programs are stored in files called projects, which can have logs, images, sounds, and more programs, all in a single file.
         <br><br>
         <b>How does programing work?</b><br> Programing starts with a programming language. The IDE supports only one language, which is block-based. A block-based language means that you don't need to type a single word, which makes it a lot easier to
         learn. In a block-based language, there is a start, and then there are multiple functions which follow it, one after another. Each function chain is called a thread, which is a set of tasks the EV3 reads and executes. When the EV3 is multitasking,
@@ -117,7 +117,7 @@
         <div class="cell static advanced card">
           <h2>Advanced</h2>
           <h4>
-            These blocks do weird stuff. They can access files for datalogging, stop the program, send bluetooth messages, and read raw sensor data. Don't mess with these if you don't know what you're doing!
+            These blocks do niche stuff. They can access files for datalogging, stop the program, send bluetooth messages, and read raw sensor data. Don't mess with these if you don't know what you're doing!
           </h4>
         </div>
         <div class="cell static myblock card">
@@ -127,7 +127,80 @@
           </h4>
         </div>
       </div>
-      
+      <br> Now that we know the main categories of blocks, let's take one apart to figure out it's anatomy!
+      <br>
+      <img class="noborder" src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/lego_block.png" />
+      <br> The block pictured above is a color sensor block. We know it's a sensor block because the header is yellow, and we know that it interacts with the color sensor because it is pictured on the left side.<br> Currently, the block is set to see
+      if it reads the same color code as 5, which is red. It outputs a boolean value (true or false) and a color code value (number 0-7).
+      <br><br> Let's take a look at the different parts of the block.
+      <br>
+      <ul>
+        <li>The box in the top right corner is the port block. You can choose the port that the color sensor is connected to to target it.</li>
+        <li>The box in the bottom left side is the subfunction selector. By clicking this and choosing a different option, you can tell the function block to measure or compare a different value.</li>
+        <li>The 3 boxes to the right of the subfunction selector are the inputs and outputs of the block. Going from left to right:
+          <ul>
+            <li>The first one is an input because you can see indentations on the top. This input accepts an array object, which contains a list all of the different colors it is looking for.</li>
+            <li>The second box is an output because you can see indentations on the bottom. This box outputs whether or not the colors inputted match the color that the color sensor is looking at.</li>
+            <li>The final box outputs the color that the color sensor sees.</li>
+          </ul>
+        </li>
+      </ul>
+      <br> You can drag blocks to snap them together, like virtual legos. The outputs of one block can be dragged and snapped into another's block.<br><br>
+      <b>Blocks aren't that hard!</b>
+    </div>
+
+    <div id="sensors" class="purple parentcard static">
+      <h2>Sensors</h2>
+      <br>
+      <h4>
+        <b>What sensors are there? What do they do?</b><br> Here's a list of all the EV3 sensors, and what they do.
+        <br><br>
+        <div class="grid">
+          <div class="cell white card">
+            <h2>Touch Sensor</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Touch-Sensor.png"><br> These sensors are the most basic sensors. They are essentially a button. They output a boolean value (true or false), and
+            can be used as a way of detecting if your robot has hit a wall.
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Touch-Sensor-45507">Order</a>
+          </div>
+          <div class="cell white card">
+            <h2>Color Sensor</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Colour-Sensor.png"><br> These sensors are like the eyes of your robot. They can tell you the color, reflectivity, and the brightness of the surface
+            they're pointed towards.
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Color-Sensor-45506">Order</a>
+          </div>
+          <div class="cell white card">
+            <h2>Ultrasonic Sensor</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Ultrasonic-Sensor-300x197.png"><br> This sensor measures the distance between the sensor and the surface it is pointed towards. In addition, it can
+            tell you if there are other sensors present.
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Ultrasonic-Sensor-45504">Order</a>
+          </div>
+          <div class="cell white card">
+            <h2>Gyro Sensor</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Gyro-Sensor.png"><br> This sensor measures the its rotation around the vertical axis, relative to the world around the robot.<br>
+            <div class="orange static card" style="float:right;">
+              <div style="text-align:center;">
+                <b>⚠ Warning! ⚠</b>
+              </div>
+              This sensor has been known to be inaccurate. Avoid it unless absolutely necessary.
+            </div>
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Gyro-Sensor-45505">Order</a>
+          </div>
+          <div class="cell white card">
+            <h2>Motor Rotary Encoder</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Servo-Motor-300x237.png"><br> This is a pseudo-sensor. Each EV3 motor has an embedded rotary encoder, which measures the rotation of the motor. You
+            can access it and use it for measuring a motor's rotation.
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Large-Servo-Motor-45502">Order (large servo)</a>
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Medium-Servo-Motor-45503">Order (medium servo)</a>
+          </div>
+          <div class="cell white card">
+            <h2>Infrared Sensor</h2>
+            <img class="white cardimg" src="http://www.legoengineering.com/wp-content/uploads/2018/01/EV3-Infrared-Sensor-300x181.png"><br> This sensor measures proximity, the general direction of an infrared beacon, and it can recieve commands from an
+            infrared beacon, like a remote-control car.
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Infrared-Sensor-45509">Order (sensor)</a>
+            <a class="button" href="https://shop.lego.com/en-US/product/EV3-Infrared-Beacon-45508">Order (beacon)</a>
+          </div>
+        </div>
+      </h4>
     </div>
   </body>
 
