@@ -3,15 +3,19 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
 
   <body>
-    <h1>Programming</h1>
-    <h4>
-      This section deals with how to program an EV3 robot.
-    </h4>
+    <h1 id="header">Programming</h1>
+    <h4>This section deals with how to program an EV3 robot.</h4>
     <br>
+
+    <a href="#header" class="white top card">
+      <i class="material-icons icon">arrow_upward</i>
+      <div class="topchild">Going up?</div>
+    </a>
 
     <div class="grid">
 
@@ -45,11 +49,11 @@
         <a class="button" href="#variables">Let's go!</a>
       </div>
 
-      <div class="maroon cell card">
+      <!--<div class="maroon cell card">
         <h2>GUI programming</h2>
         <h4>What's a GUI? How can I use them?</h4>
         <a class="button" href="#ui">Let's go!</a>
-      </div>
+      </div>-->
     </div>
     <br>
     <div id="setup" class="pink card static">
@@ -61,7 +65,7 @@
         <br><br>
         <b>How do I get started?</b><br> To get started, head over to the LEGO website and download the <a href="https://education.lego.com/en-us/downloads/mindstorms-ev3/software">EV3 Education software</a>. Install it, and start the program. You should
         be greeted with this starting screen.
-        <img src="media/startscreen.png">
+        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/startscreen.png">
         <br>Congratulations! You just set up the IDE!
       </h4>
     </div>
@@ -72,7 +76,7 @@
       <h4>
         <b>How do I make a new program?</b>
         <br>It's pretty easy, actually. All you need to do is click <code>File</code>, click <code>New Project</code>, and then double-click <code>Program</code>.<br>
-        <img src="media/newfile.png"><br> Programs are stored in files called projects, which can have logs, images, sounds, and more programs, all in a single file.
+        <img src="https://raw.githubusercontent.com/epicface2304/FLL-Coding/master/media/newfile.png"><br> Programs are stored in files called projects, which can have logs, images, sounds, and more programs, all in a single file.
         <br><br>
         <b>How does programing work?</b><br> Programing starts with a programming language. The IDE supports only one language, which is block-based. A block-based language means that you don't need to type a single word, which makes it a lot easier to
         learn. In a block-based language, there is a start, and then there are multiple functions which follow it, one after another. Each function chain is called a thread, which is a set of tasks the EV3 reads and executes. When the EV3 is multitasking,
@@ -198,6 +202,32 @@
             infrared beacon, like a remote-control car.
             <a class="button" href="https://shop.lego.com/en-US/product/EV3-Infrared-Sensor-45509">Order (sensor)</a>
             <a class="button" href="https://shop.lego.com/en-US/product/EV3-Infrared-Beacon-45508">Order (beacon)</a>
+          </div>
+        </div>
+      </h4>
+    </div>
+
+    <div id="variables" class="green parentcard static">
+      <h2>Variables</h2>
+      <br>
+      <h4>
+        <b>What are variables?</b><br> Variables are used to store data within a program. There are three types: numeric, text, and boolean. The number variable stores numbers, the text variable stores text (like a word), and the boolean type stores a
+        conditional value, like true or false.<br><br> Let's take a look at an example of the main datatypes.<br><br>
+        <div class="grid">
+          <div class="cell white card">
+            <h2>Number</h2>
+            This datatype stores a number, like the type you can type into the box below. If it's red, it's not a valid number.<br>
+            <input class="code button" type="number" value="42">
+          </div>
+          <div class="cell white card">
+            <h2>Text</h2>
+            This datatype stores text, which is also known as a string. Any character you can type is valid here.<br>
+            <input class="code button" type="text" value="Hello World!">
+          </div>
+          <div class="cell white card">
+            <h2>Boolean</h2>
+            This datatype stores a logical value, a one or a zero. You can directly input this type of data into a if/then statement. A boolean is best represented by a checkbox:<br>
+            <input class="code button" type="checkbox">
           </div>
         </div>
       </h4>
